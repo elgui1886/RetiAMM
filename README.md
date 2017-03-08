@@ -1,7 +1,7 @@
 # RetiAMM
 Esempi tratti dal corso SignalR
 
-In questo esempio viene configurato un WCF di tipo Rest [MDMWCFService] (modifica al web config) che espone dei metodi.
+In questo esempio viene configurato un WCF di tipo Rest [MDMWCFService] - modifica al web config - che espone dei metodi.
 
 In un altro dominio (altro progetto, localhost lavora su porte diverse), viene
 configurato un sito web [WDM] che dialoga con un hub posto dentro al WCF.
