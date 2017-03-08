@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDMWCFService", "MDMWCFService\MDMWCFService.csproj", "{B5CC04BC-CB57-4491-9A8A-622B8C4AE076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WDM", "WDM\WDM.csproj", "{9C115337-FF87-451E-B22F-26E1A504433A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAC", "SAC\SAC.csproj", "{6386699C-06F1-44A9-89AA-E0E315F85506}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5CC04BC-CB57-4491-9A8A-622B8C4AE076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5CC04BC-CB57-4491-9A8A-622B8C4AE076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5CC04BC-CB57-4491-9A8A-622B8C4AE076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5CC04BC-CB57-4491-9A8A-622B8C4AE076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C115337-FF87-451E-B22F-26E1A504433A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C115337-FF87-451E-B22F-26E1A504433A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C115337-FF87-451E-B22F-26E1A504433A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C115337-FF87-451E-B22F-26E1A504433A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6386699C-06F1-44A9-89AA-E0E315F85506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6386699C-06F1-44A9-89AA-E0E315F85506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6386699C-06F1-44A9-89AA-E0E315F85506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6386699C-06F1-44A9-89AA-E0E315F85506}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

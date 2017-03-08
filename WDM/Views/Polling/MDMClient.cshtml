@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "MDMClient";
+}
+
+
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+<script src="~/Scripts/jquery.signalR-2.2.1.js"></script>
+
+
+<script src="http://localhost:53812/signalr/hubs"></script>
+
+@*Ieri avevamo messo questa reference, ma poiche lui lo cercherebbe in questo dominio (progetto) e non in quello che dovrebbe, devo inserire l url del mio servicee che ospita l hub*@
+
+<h2>MDMClient</h2>
+
+</br>
+
+<div class="container">
+    <h2>Info from server</h2>
+
+    <div class="panel panel-default">
+        <div class="panel-body" id="pnl_info"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $.connection.hub.url = 'http://localhost:53812/signalr'; //non metto lo script proxy ma l url all altro dominio che ospita l hub
+
+    var mdm = $.connection.mDMHub; //la prima lettera del proxy del mio hub deve andare minuscola
+
+    mdm.client.notifyme = function (realTimeInfo) {
+        var $panelInfo = $('#pnl_info');
+        $panelInfo.empty();
+        var html = '<p>' + realTimeInfo.CodiceUtenza + '</p>';
+        html += '<p>' + realTimeInfo.Pressione + '</p>';
+        html += '<p>' + realTimeInfo.Portata + '</p>';
+        html += '<p>' + realTimeInfo.SetPoint + '</p>';
+        html += '<p>' + realTimeInfo.TimeStamp + '</p>';
+        $panelInfo.html(html);
+    };
+
+    $.connection.hub.start().done(function(){
+        console.log('hub started');
+    });// fine done
+</script>

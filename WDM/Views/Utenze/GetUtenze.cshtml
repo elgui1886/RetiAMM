@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "GetUtenze";
+}
+
+<link href="~/Scripts/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+
+<script type="text/javascript">
+    $(function () { //esegui quando scatta l'evento ready del dom
+        $('#btn_getutenze').on('click', function () {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:53812/MDMService.svc/rest/getlistautenze'
+            }).done(function (utenze) {
+                $.each(utenze, function (i, utenza) {
+                    var row = '<tr>';
+                    row += '<td>' + utenza.CodiceUtente + '</td>';
+                    row += '<td>' + utenza.CodiceAzienda + '</td>';
+                    row += '</tr>';
+                    $('#tbl_utenze tbody').append(row);
+                });//end foreach
+            });//end callback
+        });//end btnclick
+    });//en jquery
+
+</script>
+
+<h2>GetUtenze</h2>
+
+<button type="button" class="btn btn-primary" id="btn_getutenze">Get Utenze</button>
+<table class="table table-striped" id="tbl_utenze">
+    <thead>
+      <tr>
+        <th>Codic Azienda</th>
+        <th>Codice Utenza</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
